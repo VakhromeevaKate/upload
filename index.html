@@ -1,0 +1,14 @@
+<head>
+    <meta charset="utf-8"/>
+    <title>Up!Load</title>
+</head>
+<body>
+    <h1>File uploading form</h1>
+    <form enctype="multipart/form-data" action="upload.php" method="POST">
+        <!-- Поле MAX_FILE_SIZE должно быть указано до поля загрузки файла -->
+        <input type="hidden" name="MAX_FILE_SIZE" value="3145728" />
+        <!-- Название элемента input определяет имя в массиве $_FILES -->
+        Save this file: <input name="userfile" type="file" />
+        <input type="submit" value="Send File" />
+    </form>
+</body>
