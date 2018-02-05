@@ -2,6 +2,7 @@
 
 $uploaddir = $_SERVER['DOCUMENT_ROOT'].'/files/';
 echo "Save into dir: ".$uploaddir;
+$_FILES['userfile']['name']=str_replace(" ","_",$_FILES['userfile']['name']);
 $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 
 echo '<pre>';
